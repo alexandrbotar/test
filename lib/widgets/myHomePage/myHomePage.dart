@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 26,
                 ),
                 Container(
                   width: double.infinity,
