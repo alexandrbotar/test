@@ -23,7 +23,7 @@ abstract class MainScreenStyle {
     shape: MaterialStateProperty.all(RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(25),
     )),
-    backgroundColor: MaterialStateProperty.all(Colors.amber),
+    backgroundColor: MaterialStateProperty.all(Colors.teal),
   );
   //historyButtonStyle
   static final historyButtonStyle = ButtonStyle(
@@ -32,14 +32,14 @@ abstract class MainScreenStyle {
     shape: MaterialStateProperty.all(RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(25),
     )),
-    backgroundColor: MaterialStateProperty.all(Colors.blue),
+    backgroundColor: MaterialStateProperty.all(Colors.redAccent),
   );
   static const backgroundImageTheme = BoxDecoration(
     image: DecorationImage(
-      image: AssetImage('assets/images/4.jpg'),
+      image: AssetImage('assets/images/2.jpg'),
       fit: BoxFit.fill,
     ),
   );
-  static const catInfoTextStyle = TextStyle(
-      color: Colors.white70, fontSize: 19, fontWeight: FontWeight.w600);
+  static const catInfoTextStyle =
+      TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.w600);
 }

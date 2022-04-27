@@ -29,19 +29,23 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 const SizedBox(
-                  height: 25,
+                  height: 15,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(40),
-                  child: Image.network(
-                    'https://cataas.com/cat',
-                    key: ValueKey(imageKey),
-                    height: 220,
-                    loadingBuilder: MainScreenStyle.ImageLoading,
+                Container(
+                  // width: double.infinity,
+                  height: 200,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(40),
+                    child: Image.network(
+                      'https://cataas.com/cat',
+                      key: ValueKey(imageKey),
+                      height: 200,
+                      loadingBuilder: MainScreenStyle.ImageLoading,
+                    ),
                   ),
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: const Text('Котячі історії'),
                     ),
                     const SizedBox(
-                      width: 10,
+                      width: 15,
                     ),
                     ElevatedButton(
                       style: MainScreenStyle.nextButtonStyle,
@@ -67,14 +71,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           addCatInfo();
                         });
                       },
-                      child: const Text('наступна котейка'),
+                      child: const Text('Наступна котейка'),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 26,
+                  height: 15,
                 ),
                 Container(
+                  height: 220,
                   width: double.infinity,
                   margin: const EdgeInsets.symmetric(horizontal: 3),
                   padding:
@@ -83,11 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(41),
                     color: Colors.black87,
                   ),
-                  child: Text(
-                    catInfoText,
-                    style: MainScreenStyle.catInfoTextStyle,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.clip,
+                  child: SingleChildScrollView(
+                    child: Text(
+                      catInfoText,
+                      style: MainScreenStyle.catInfoTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ],
