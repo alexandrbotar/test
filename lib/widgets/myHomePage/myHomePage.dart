@@ -31,8 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 15,
                 ),
-                Container(
-                  // width: double.infinity,
+                SizedBox(
                   height: 200,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(40),
